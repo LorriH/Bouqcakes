@@ -1,277 +1,207 @@
 <!doctype html>
-<!-- this is how you make a comment -->
-<!-- cmd S to save -->
-<!-- Tab to indent, Shift Tab to remove -->
-<!-- After Save go to Github to Commit -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Petal and Leaf Cake Studio — custom floral and nature-inspired cakes and cupcakes in Centerville, Ohio."
+    />
     <link rel="stylesheet" href="/src/index.css" />
+    <!-- Caveat font -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
     <title>Petal and Leaf Cake Studio</title>
   </head>
-  <body class="font-caveat text-xl bg-stone-200/80">
-    <div class="flex items-center justify-center">
-      <div class="text-center space-y-2 max-w-lg bg-white shadow-lg shadow-black/30">
-        <div>
-          <img src="/PetalandLeafLogo.jpg" class="w-2/3 m-auto p-4" />
-          <p>Floral and nature inspired cakes and cupcakes</p>
-        </div>
 
-        <div class="grid grid-cols-3">
-          <a class="m-4" href="https://photos.app.goo.gl/ymSqwTtuBjzHwnVo7">
-            <img src="/Cake.png" />
-            cake gallery
-          </a>
-          <a class="m-2" href="https://photos.app.goo.gl/zvpPmYgBtirfEpcx8">
-            <img src="/Cupcake.png" />
-            cupcake gallery
-          </a>
-          <a class="m-0" href="https://photos.app.goo.gl/HwsXiUPmDDtWbiy86">
-            <img src="/whimsical.png" />
-            whimsical gallery
-          </a>
-        </div>
+  <body class="bg-[#f7f6f3] text-[#2f2f2f] font-sans">
 
-<!--        <div class="w-1/2 m-auto">
-          <a class="m-0" href="https://photos.app.goo.gl/HwsXiUPmDDtWbiy86">
-            <img src="/whimsical.png" />
-            whimsical gallery
-          </a>
-        </div>  -->
+    <!-- Sticky Inquiry Button -->
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSd_TeI7ovOyjLXj7Kgd1GNhqQHWhCGcsbQicfKuD3St4JJOXQ/viewform?usp=sf_link"
+      class="fixed bottom-5 right-5 z-50 bg-[#6b8f7a] text-white px-6 py-3 rounded-full shadow-lg hover:bg-[#5a7d6a] transition text-sm tracking-wide"
+    >
+      Inquiry / Order
+    </a>
 
-        <ul class="space-y-2 w-64 m-auto">
-          <li class="bg-[#f6e8c3] rounded-xl shadow-md shadow-black/200">
-            <a href="#about">About Petal and Leaf Cake Studio</a>
-          </li>
-          <li class="bg-[#c5957c]/50 rounded-xl shadow-md shadow-black/200">
-            <a href="#flavors">Flavors & Ingredients</a>
-          </li>
-          <li class="bg-[#a57d7f]/60 rounded-xl shadow-md shadow-black/200">
-            <a href="#pricing">Pricing</a>
-          </li>
-          <li class="bg-[#a194b6]/60 rounded-xl shadow-md shadow-black/200">
-            <a href="#design_options">Design Options</a>
-          </li>
-          <li class="bg-[#5a7d86]/50 rounded-xl shadow-md shadow-black/200">
-            <a href="#fun">Want to have some fun?</a>
-          </li>
-          <li class="bg-[#b1baa9] rounded-xl shadow-md shadow-black/200">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_TeI7ovOyjLXj7Kgd1GNhqQHWhCGcsbQicfKuD3St4JJOXQ/viewform?usp=sf_link">Inquiry / Order</a>
-          </li>
-        </ul>
+    <div class="flex justify-center px-4 py-4">
+      <div class="max-w-3xl w-full bg-white shadow-xl rounded-2xl overflow-hidden">
 
-        <br>
+        <!-- HEADER -->
+        <header class="px-8 pt-4 pb-4 bg-white">
+          <div class="flex flex-col md:flex-row items-center gap-4 md:gap-10">
+            <img
+              src="/PetalandLeafLogo.jpg"
+              alt="Petal and Leaf Cake Studio logo"
+              class="w-40 md:w-44 shrink-0"
+            />
 
-        <div class="text-left font-sans text-base">
-          <div class="bg-[#f6e8c3] px-2 py-8 space-y-4 border-t border-neutral-400">
-            <h2 class="text-3xl font-caveat" id="about">About Petal and Leaf Cake Studio</h2>
-            <p>
-              Welcome to Petal and Leaf Cake Studio.  I make custom cakes and cupcakes out of my home in Centerville, Ohio.  
-            </p>
-
-  
-            <div class="grid grid-cols-7 gap-4 items-center">
-              <img class="col-span-3" src="/About.jpg" /> 
-              <div class="col-span-4 text-justify">
-             <p>
-              I enjoy combining the visual beauty of flowers and
-              the wonder of nature with the deliciousness of cake
-              and frosting!&nbsp;&nbsp;&nbsp;&nbsp;Mmmmmmm! 
-               <br> Once complete, I love sharing them with others!!
-            </p>   
-              </div>
-
-            </div>
-            <p class="font-caveat text-xl text-center">
-              I can’t wait to create something special for you!
-            </p>
-          </div>
-
-          <div class="bg-[#c5957c]/50 px-2 py-8 space-y-4 border-t border-neutral-400">
-            <h2 class="text-3xl font-caveat" id="flavors">Flavors & Ingredients</h2>
-
-            <div class="grid grid-cols-3">
-              <div class="col-span-2">
-                <p>
-                  My signature flavor is Carrot Cake with &nbsp;vanilla buttercream frosting and flowers.
-                </p>
-              </div>
-
-              <img class="w-3/5" src="/CarrotCake.jpg" /> 
-              
-            </div>
-
-            <p>
-              I also have a really good, lemon cake with extra lemony frosting and
-              buttercream flowers.
-            </p>
-            <p>
-              Of course I can do chocolate, yellow, white, red velvet,
-              cherry, strawberry, spice, coconut…  I start with a boxed cake mix
-              and zhuzh it up a bit, so whatever’s out there is an option!
-            </p>
-            <p>
-              <!-- I use American Buttercream and Swiss Meringue Buttercream frostings.
-              <i>American</i> is delightfully sweet and buttery and makes the most beautiful
-              flowers.  <i>Swiss</i> is light and fluffy, and it’s less sweet.  I can use
-              both or either for your order - Using the Swiss Meringue for flowers
-              will limit the design options.-->
-            </p>
-            <p>
-              <u>American Buttercream</u>:  Butter, confectioner’s sugar, flavor
-              (vanilla extract, lemon juice, etc.)
-            </p>
-
-            <div class="grid grid-cols-3">
-              <div class="col-span-2">
-                <p>
-                  <u>Swiss Buttercream</u>: Butter, Egg whites (pasteurized to at least 160⁰ F),
-                  sugar, flavor (vanilla extract, lemon juice, cream cheese, etc.)
-                </p>
-              </div>
-
-              <img class="w-3/5" src="/SwissMeringue.jpg" /> 
-              
-            </div>
-            <div>
-              <p class="text-center">
-                * * * * * * *
-              </p>
-              <p>
-                I bake out of my home kitchen and cannot guarantee baked items are free
-                from allergens. If severe allergies exist, I recommend not consuming my
-                products.
-              </p>
-              <p class="text-center">
-                * * * * * * *
+            <div class="text-center md:text-left space-y-2 md:mt-2">
+              <h1 class="text-3xl md:text-4xl tracking-wide leading-snug" style="font-family: 'Caveat', cursive;">
+                Custom designed cakes and cupcakes
+              </h1>
+              <p class="max-w-xl text-neutral-700">
+                Floral & nature-Inspired cakes and cupcakes featuring buttercream flowers and an occasional touch of whimsy.
               </p>
             </div>
-          
+          </div>
+        </header>
+
+        <!-- GALLERY -->
+        <section class="px-8 py-2 bg-[#f7f6f3] space-y-2">
+          <h2 class="text-3xl md:text-4xl tracking-wide text-center text-neutral-600" style="font-family: 'Caveat', cursive;">
+            Gallery
+          </h2>
+
+          <!-- MOBILE-ONLY: horizontal pill buttons -->
+          <div class="flex justify-around py-2 sm:hidden">
+            <a href="https://photos.app.goo.gl/ymSqwTtuBjzHwnVo7" 
+               class="w-20 bg-gradient-to-b from-white to-neutral-100 rounded-full text-neutral-600 text-[11px] tracking-widest py-0.5 text-center
+                      shadow-md shadow-inner transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+              Cakes
+            </a>
+            <a href="https://photos.app.goo.gl/zvpPmYgBtirfEpcx8" 
+               class="w-20 bg-gradient-to-b from-white to-neutral-100 rounded-full text-neutral-600 text-[11px] tracking-widest py-0.5 text-center
+                      shadow-md shadow-inner transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+              Cupcakes
+            </a>
+            <a href="https://photos.app.goo.gl/HwsXiUPmDDtWbiy86" 
+               class="w-20 bg-gradient-to-b from-white to-neutral-100 rounded-full text-neutral-600 text-[11px] tracking-widest py-0.5 text-center
+                      shadow-md shadow-inner transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+              Whimsical
+            </a>
           </div>
 
-          <div class="bg-[#a57d7f]/60 px-2 py-8 space-y-4 border-t border-neutral-400">
-            <h2 class="text-3xl font-caveat" id="pricing">Pricing</h2>
-            <p>
-              I <i>love</i> a bargain!  My goal is to have you have that “I just got a great
-              deal” feeling. 
-            </p>
-            <p>
-              Every order is custom - flavors, colors, frosting and design.  The prices
-              below will cover most orders (if you want something <i>extra</i> extra-special, we
-              might need to discuss pricing).  If you don’t see something that works for
-              you, let me know your budget and we’ll talk!
-            </p>
+          <!-- DESKTOP -->
+          <div class="hidden sm:grid grid-cols-3 gap-2 text-center">
+            <a href="https://photos.app.goo.gl/ymSqwTtuBjzHwnVo7" class="flex flex-col items-end group">
+              <div class="h-32 w-32 sm:h-20 sm:w-20 flex items-center justify-center">
+                <img src="/Cake.png" class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105 cursor-pointer" />
+              </div>
+              <span class="w-24 bg-gradient-to-b from-white to-neutral-100 rounded-full text-neutral-600 text-[11px] tracking-widest mt-1 py-0.5 inline-block
+                           shadow-md shadow-inner transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-lg">
+                Cakes
+              </span>
+            </a>
 
-            <div class="w-80 m-auto py-4">
-              <h3 class="text-center text-xl">Custom Cakes</h3>
-              <h4 class="text-center">(Serve 10-18)</h4>
-              <ul class="mt-4">
-                <li class="flex items-baseline gap-2">
-                  9" Round 2 layer
-                  <hr class="grow border-black border-dashed">
-                  <div class="w-10">$60</div>
-                </li>
-                <li class="flex items-baseline gap-2">
-                  Irregular / Carved
-                  <hr class="grow border-black border-dashed">
-                  <div class="w-10">$75+</div>
-                </li>
-                <li class="flex items-baseline gap-2">
-                  Additional Layers
-                  <hr class="grow border-black border-dashed">
-                  <div class="w-10">$10+</div>
-                </li>
-              </ul>
-            </div>
+            <a href="https://photos.app.goo.gl/zvpPmYgBtirfEpcx8" class="flex flex-col items-center group">
+              <div class="h-32 w-32 sm:h-20 sm:w-20 flex items-center justify-center">
+                <img src="/Cupcake.png" class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105 cursor-pointer" />
+              </div>
+              <span class="w-24 bg-gradient-to-b from-white to-neutral-100 rounded-full text-neutral-600 text-[11px] tracking-widest mt-1 py-0.5 inline-block
+                           shadow-md shadow-inner transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-lg">
+                Cupcakes
+              </span>
+            </a>
 
-            <div class="grid grid-cols-3">
-              <img src="/DeesCake.jpg" /> 
-              <img src="/HeartCake.jpg" /> 
-              <img src="/FairyForestCake.jpg" /> 
-            </div>
-            
-            <div class="w-80 m-auto py-4">
-              <h3 class="text-center text-xl">Custom Cupcakes</h3>
-              <ul class="mt-4">
-                <li class="flex items-baseline gap-2">
-                  Small Bouquet (7 cupcakes)
-                  <hr class="grow border-black border-dashed">
-                  <div class="w-10">$25</div>
-                </li>
-                <li class="flex items-baseline gap-2">
-                  Boxed Dozen (12 cupcakes)
-                  <hr class="grow border-black border-dashed">
-                  <div class="w-10">$30</div>
-                </li>
-                <li class="flex items-baseline gap-2">
-                  Large Bouquet (19 cupcakes)
-                  <hr class="grow border-black border-dashed">
-                  <div class="w-10">$60</div>
-                </li>
-                <li class="flex items-baseline gap-2">
-                  Boxed Dozen (24 cupcakes)
-                  <hr class="grow border-black border-dashed">
-                  <div class="w-10">$55</div>
-                </li>
-              </ul>
-            </div>
-
-            <p class="text-center">
-              Cupcake Bouquets are  
-  individually wrapped Cupcakes in tissue and assembled in a table-ready format.
-            </p>
-<!-- Place held for Cupcake pics
-            <div class="grid grid-cols-3">
-              <img src="/DeesCake.jpg" /> 
-              <img src="/HeartCake.jpg" /> 
-              <img src="/FairyForestCake.jpg" /> 
-            </div>
- -->
+            <a href="https://photos.app.goo.gl/HwsXiUPmDDtWbiy86" class="flex flex-col items-start group">
+              <div class="h-32 w-32 sm:h-20 sm:w-20 flex items-center justify-center">
+                <img src="/whimsical.png" class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105 cursor-pointer" />
+              </div>
+              <span class="w-24 bg-gradient-to-b from-white to-neutral-100 rounded-full text-neutral-600 text-[11px] tracking-widest mt-1 py-0.5 inline-block
+                           shadow-md shadow-inner transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-lg">
+                Whimsical
+              </span>
+            </a>
           </div>
-          
-          <div class="bg-[#a194b6]/60 px-2 py-8 space-y-4 border-t border-neutral-400">
-            <h2 class="text-3xl font-caveat" id="design_options">Design Options</h2>
-            <p>
-              Here are just some of the options for designing your special cake or cupcake... 
-            </p>
+        </section>
 
-            <!-- Place held for Design Option pics
-            <div class="grid grid-cols-3">
-              <img src="/DeesCake.jpg" /> 
-              <img src="/HeartCake.jpg" /> 
-              <img src="/FairyForestCake.jpg" /> 
+        <!-- ABOUT -->
+        <section class="px-8 py-6 bg-white space-y-4">
+          <h2 class="text-3xl font-caveat text-center">About the Studio</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <img src="/About.jpg" class="rounded-xl" />
+            <div class="space-y-3 text-neutral-700">
+              <p>Petal and Leaf Cake Studio is a small, home-based cake studio located in Centerville, Ohio. Each piece is made to order.</p>
+              <p>Inspired by gardens, seasons, and the quiet beauty of nature, my work translates organic elements into buttercream flowers.</p>
+              <p class="italic">I would be honored to create something meaningful for your celebration.</p>
             </div>
- -->
-
           </div>
+        </section>
 
-          <div class="bg-[#5a7d86]/50 px-2 py-8 space-y-4 border-t border-neutral-400">
-            <h2 class="text-3xl font-caveat" id="fun">Want to have some fun?</h2>
-            <p>
-              Decorating with frosting is super fun and (don’t tell anyone)
-              not as hard as you might think.  If you have a group that would
-              like to try it, use the "Inquiry / Order" button and let's talk!
-            </p>
-  
-            <div class="grid grid-cols-3">
-              <div class="col-span-2">
-                <ul class="ml-12 list-disc">
-                  <li>Friends</li>
-                  <li>Kids</li>
-                  <li>Homeschool</li>
-                  <li>Church group</li>
-                  <li>&hellip; anyone *</li>
+        <!-- FLAVORS & INGREDIENTS (image on right) -->
+        <section class="px-8 py-6 bg-[#f7f6f3] space-y-4">
+          <h2 class="text-3xl font-caveat text-center">Flavors & Ingredients</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+            <div class="space-y-2 text-neutral-700 order-1 md:order-0">
+              <p>My signature flavor is carrot cake with vanilla buttercream and floral designs.</p>
+              <p>I also offer bright lemon, chocolate, yellow, white, red velvet, cherry, strawberry, spice, coconut—almost anything is possible. I start with quality mixes and enhance them with extra flavor, richness, and love.</p>
+              <p><u>American Buttercream</u>: butter, confectioner’s sugar, flavorings</p>
+              <p><u>Swiss Buttercream</u>: butter, pasteurized egg whites, sugar, flavorings</p>
+              <p class="text-sm">I bake in a home kitchen and cannot guarantee products are free from allergens.</p>
+            </div>
+            <img src="/CarrotCake.jpg" alt="Carrot cake with buttercream flowers" class="rounded-xl order-0 md:order-1" />
+          </div>
+        </section>
+
+        <!-- PRICING -->
+        <section class="px-8 py-6 bg-white space-y-6">
+          <h2 class="text-3xl font-caveat text-center">Pricing</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+
+            <!-- Cakes Pricing -->
+            <div class="space-y-4">
+              <div class="bg-[#f7f6f3] rounded-xl shadow-lg p-4 text-center">
+                <h3 class="font-caveat text-xl mb-2">Cakes</h3>
+                <ul class="list-none space-y-1 text-neutral-700">
+                  <li>6" round cake: <strong>$45</strong></li>
+                  <li>8" round cake: <strong>$65</strong></li>
+                  <li>10" round cake: <strong>$85</strong></li>
                 </ul>
               </div>
-
-              <img class="w-2/3" src="/GirlsCupcakes.jpg" /> 
-              
+              <!-- Cake Images -->
+              <div class="flex gap-0">
+                <img src="/DeesCake.jpg" alt="Dees Cake" class="w-1/3 object-cover rounded-tl-lg">
+                <img src="/HeartCake.jpg" alt="Heart Cake" class="w-1/3 object-cover">
+                <img src="/FairyForestCake.jpg" alt="Fairy Forest Cake" class="w-1/3 object-cover rounded-tr-lg">
+              </div>
             </div>
-            <p class="text-right text-1xl font-caveat w-11/12">* dogs only invited for QC</p>
+
+            <!-- Cupcakes Pricing -->
+            <div class="space-y-4">
+              <div class="bg-[#f7f6f3] rounded-xl shadow-lg p-4 text-center">
+                <h3 class="font-caveat text-xl mb-2">Cupcakes</h3>
+                <ul class="list-none space-y-1 text-neutral-700">
+                  <li>Single: <strong>$4</strong></li>
+                  <li>Half dozen: <strong>$22</strong></li>
+                  <li>Dozen: <strong>$42</strong></li>
+                </ul>
+              </div>
+              <!-- Cupcake Images -->
+              <div class="flex gap-0">
+                <img src="/DeesCake.jpg" alt="Dees Cupcake" class="w-1/3 object-cover rounded-tl-lg">
+                <img src="/HeartCake.jpg" alt="Heart Cupcake" class="w-1/3 object-cover">
+                <img src="/FairyForestCake.jpg" alt="Fairy Forest Cupcake" class="w-1/3 object-cover rounded-tr-lg">
+              </div>
+            </div>
+
           </div>
-         
-        </div>
+        </section>
+
+        <!-- DESIGN OPTIONS -->
+        <section class="px-8 py-6 bg-[#f7f6f3] space-y-4">
+          <h2 class="text-3xl font-caveat text-center">Design Options</h2>
+          <p class="text-neutral-700 text-center">
+            From simple buttercream bouquets to elaborate sculpted designs, I can tailor each cake to your vision.
+          </p>
+        </section>
+
+        <!-- DECORATING WORKSHOPS -->
+        <section class="px-8 py-6 bg-white space-y-4">
+          <h2 class="text-3xl font-caveat text-center">Decorating Workshops</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+            <img src="/GirlsCupcakes.jpg" alt="Kids decorating cupcakes together" class="rounded-xl md:w-1/2 mx-auto" />
+            <div class="space-y-2 text-neutral-700">
+              <p>I offer workshops for friends, kids, homeschool groups, church groups, or anyone who wants to learn the joy of cake decorating. Sessions are hands-on and fun!</p>
+              <p class="italic text-right">* dogs only invited for QC</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="text-center py-4 text-sm text-neutral-500 bg-[#f7f6f3]">
+          © Petal and Leaf Cake Studio · Centerville, Ohio
+        </footer>
+
       </div>
     </div>
   </body>
