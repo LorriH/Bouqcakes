@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         caveat: ['Caveat'],
+        allura: ['Allura'],
       },
     },
   },

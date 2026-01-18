@@ -16,6 +16,7 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
+    "@fontsource/allura": "^5.2.8",
     "@fontsource/caveat": "^5.0.15"
   }
 }
