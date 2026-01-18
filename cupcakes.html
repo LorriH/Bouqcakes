@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cupcake Gallery</title>
+  <link rel="stylesheet" href="/src/index.css" />
+
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body { background-color: #f8f7f5; }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+      flex-direction: column;
+    }
+
+    .lightbox img { max-width: 90%; max-height: 80%; border-radius: 0.75rem; }
+
+    #lightbox-caption { color:white; margin-top:0.5rem; text-align:center; font-size:1rem; }
+
+    .lightbox button { transition: background 0.2s; }
+  </style>
+</head>
+
+<body class="flex justify-center py-10">
+
+  <div class="w-full max-w-6xl bg-white shadow-lg rounded-xl px-6 md:px-10 py-8">
+
+    <div class="flex justify-center mb-6">
+      <img src="/cakes/Petalandleafbanner.png" alt="Logo" class="w-1/4 max-w-xs">
+    </div>
+
+    <h1 class="text-4xl font-allura text-center mb-3" style="font-weight:400;">
+      Cupcake Gallery
+    </h1>
+
+    <p class="text-center text-neutral-700 mb-6">
+      Whether boxed or gathered into a bouquet, cupcakes are delightful for celebrations big and small.
+    </p>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gallery-grid">
+      <!-- JS inserts images here -->
+    </div>
+  </div>
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" />
+    <div id="lightbox-caption"></div>
+
+    <button id="prev-btn" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl p-2 bg-black/50 rounded-full hover:bg-black/70" onclick="prevImage(event)">&#10094;</button>
+    <button id="next-btn" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl p-2 bg-black/50 rounded-full hover:bg-black/70" onclick="nextImage(event)">&#10095;</button>
+  </div>
+
+  <script>
+    const galleryContainer = document.querySelector('.gallery-grid');
+
+    // ===== Cupcake images array =====
+    const images = [
+      { src:'/cupcakes/cupcake27.jpg', caption:'Pull-Apart Bouquet'  },  
+      { src:'/cupcakes/cupcake11.jpg' },
+      { src:'/cupcakes/cupcake03.jpg' },
+      { src:'/cupcakes/cupcake20.jpg' },
+     
+      { src:'/cupcakes/cupcake28.jpg' , caption:'Premium Cupcake Liner' },
+      { src:'/cupcakes/cupcake01.jpg' },
+      { src:'/cupcakes/cupcake23.jpg' },
+      { src:'/cupcakes/cupcake26.jpg' },
+
+      { src:'/cupcakes/cupcake13.jpg' },
+      { src:'/cupcakes/cupcake31.jpg' },
+      { src:'/cupcakes/cupcake14.jpg' },
+      { src:'/cupcakes/cupcake05.jpg' },
+
+      { src:'/cupcakes/cupcake07.jpg' },
+      { src:'/cupcakes/cupcake06.jpg' },
+      { src:'/cupcakes/cupcake10.jpg' },
+      { src:'/cupcakes/cupcake08.jpg' },
+
+      { src:'/cupcakes/cupcake19.jpg' },
+      { src:'/cupcakes/cupcake17.jpg' },
+      { src:'/cupcakes/cupcake18.jpg' },
+     { src:'/cupcakes/cupcake16.jpg' }, 
+
+     { src:'/cupcakes/cupcake22.jpg' },
+      { src:'/cupcakes/cupcake21.jpg' },
+      { src:'/cupcakes/cupcake24.jpg' },
+      { src:'/cupcakes/cupcake25.jpg' },
+      
+      // add more images here
+    ];
+
+    images.forEach((img,index)=>{
+      const imageElement = document.createElement('img');
+      imageElement.src = img.src;
+      imageElement.className='rounded-lg shadow-md cursor-pointer hover:opacity-90';
+      imageElement.setAttribute('onclick',`openLightbox('${img.src}','img${index}')`);
+      if(img.caption) imageElement.dataset.caption = img.caption;
+      galleryContainer.appendChild(imageElement);
+    });
+
+    const lightbox=document.getElementById('lightbox');
+    const lightboxImg=document.getElementById('lightbox-img');
+    const lightboxCaption=document.getElementById('lightbox-caption');
+    let currentIndex=-1;
+
+    function openLightbox(src,id){
+      currentIndex=images.findIndex(img=>img.src===src);
+      updateLightbox();
+      lightbox.style.display='flex';
+      history.pushState({lightboxOpen:true},'', '#'+id);
+    }
+
+    function closeLightbox(){
+      lightbox.style.display='none';
+      lightboxImg.src='';
+      lightboxCaption.textContent='';
+      currentIndex=-1;
+      if(location.hash) history.back();
+    }
+
+    function showImageByIndex(index){
+      if(index>=0 && index<images.length){
+        currentIndex=index;
+        updateLightbox();
+        history.replaceState({lightboxOpen:true}, '', '#img'+currentIndex);
+      }
+    }
+
+    function updateLightbox(){
+      lightboxImg.src=images[currentIndex].src;
+      lightboxCaption.textContent=images[currentIndex].caption || '';
+    }
+
+    function prevImage(e){ e.stopPropagation(); showImageByIndex((currentIndex-1+images.length)%images.length); }
+    function nextImage(e){ e.stopPropagation(); showImageByIndex((currentIndex+1)%images.length); }
+
+    window.addEventListener('keydown',e=>{
+      if(lightbox.style.display==='flex'){
+        if(e.key==='ArrowRight') nextImage(e);
+        else if(e.key==='ArrowLeft') prevImage(e);
+        else if(e.key==='Escape') closeLightbox();
+      }
+    });
+
+    window.addEventListener('popstate',()=>{ if(lightbox.style.display==='flex') closeLightbox(); });
+
+    window.addEventListener('load',()=>{
+      if(location.hash){
+        const index=parseInt(location.hash.replace('#img',''));
+        if(!isNaN(index)&&index>=0&&index<images.length){
+          openLightbox(images[index].src,'img'+index);
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
